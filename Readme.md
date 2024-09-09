@@ -1,6 +1,6 @@
 # Личный проект «Седона»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss-individual/2/user/2519107).
+* Студент: [Владислав](https://up.htmlacademy.ru/htmlcss-individual/2/user/2519107).
 * Наставник: [ИМЯ И ФАМИЛИЯ](ССЫЛКА).
 
 ---
