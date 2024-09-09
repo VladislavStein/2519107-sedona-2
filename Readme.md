@@ -2,6 +2,7 @@
 
 * Студент: [Владислав](https://up.htmlacademy.ru/htmlcss-individual/2/user/2519107).
 * Наставник: [ИМЯ И ФАМИЛИЯ](ССЫЛКА).
+* Сайт [Седона] (https://vladislavstein.github.io/2519107-sedona-2/)
 
 ---
 
