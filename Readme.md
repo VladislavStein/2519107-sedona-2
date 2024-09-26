@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Владислав](https://up.htmlacademy.ru/htmlcss-individual/2/user/2519107).
-* Наставник: [ИМЯ И ФАМИЛИЯ](ССЫЛКА).
+* Наставник: [Валера Хаслер](https://htmlacademy.ru/profile/id224163).
 * Сайт [Седона] (https://vladislavstein.github.io/2519107-sedona-2/)
 
 ---
