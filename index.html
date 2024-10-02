@@ -46,6 +46,7 @@
 
     <main class="main-index">
       <h1 class="visually-hidden">Отдых в городе "Седона"</h1>
+      <!--ВОПРОС: Какой тег использовать? svg или img? Если svg, то как использовать?-->
       <svg class="main-index-logo" src="#" alt="Добро пожаловать в Седону"></svg>
 
       <section class="main-slogan">
@@ -90,22 +91,22 @@
         <h3 class="main-slogan-text">Опытный персонал и качественное обслуживание!</h3>
       </section>
 
-      <section class="main-possibilities">
+      <section class="main-features">
         <h2 class="visually-hidden">Возможности</h2>
-        <ul class="main-possibilities-list">
-          <li class="main-possibilities-item">
-            <img class="main-possibilities-icon" src="#" alt="Дом">
-            <h3 class="main-possibilities-item-text">Жильё</h3>
+        <ul class="main-features-list">
+          <li class="main-features-item">
+            <img class="main-features-icon" src="#" alt="Дом">
+            <h3 class="main-features-item-text">Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="main-possibilities-item">
-            <img class="main-possibilities-icon" src="#" alt="Гамбургер">
-            <h3 class="main-possibilities-item-text">Еда</h3>
+          <li class="main-features-item">
+            <img class="main-features-icon" src="#" alt="Гамбургер">
+            <h3 class="main-features-item-text">Еда</h3>
             <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="main-possibilities-item">
-            <img class="main-possibilities-icon" src="#" alt="Подарок">
-            <h3 class="main-possibilities-item-text">Сувениры</h3>
+          <li class="main-features-item">
+            <img class="main-features-icon" src="#" alt="Подарок">
+            <h3 class="main-features-item-text">Сувениры</h3>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
@@ -113,16 +114,17 @@
 
       <section class="main-search-hotel">
         <h2 class="main-search-hotel-title">Заинтересовались?</h2>
-        <h3 class="main-search-hotel-text">Укажите предполагаемые даты поездки ,и мы покажем вам лучшие предложения гостиниц в Седоне</h3>
+        <h3 class="main-search-hotel-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</h3>
         <button class="main-search-hotel-button" type="button">Поиск гостиницы в Седоне</button>
       </section>
 
       <section class="main-subscribe">
         <h2 class="main-subscribe-title">Подпишитесь на рассылку</h2>
         <h3 class="main-subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</h3>
-        <form class="main-subscribe-field" action="#" method="post">
-          <input class="main-subscribe-email" type="email" placeholder="Ваш email">
-          <input class="main-subscribe-email-btn" type="button" value="Подписаться">
+        <form class="main-subscribe-field" action="https://echo.htmlacademy.ru" method="post">
+          <!--ВОПРОС: Как связать поле для ввода email и кнопку "Подписаться"-->
+          <input class="main-subscribe-email" name="email" type="email" placeholder="Ваш email">
+          <input class="main-subscribe-email-btn" name="email-btn" type="button" value="Подписаться">
         </form>
       </section>
     </main>
