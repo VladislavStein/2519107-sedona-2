@@ -2,13 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
   </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
         <a class="logo-link" href="https://htmlacademy.ru/">
-          <img class="page-logo" src="#" alt="Логотип сайта">
+          <img class="page-logo" src="images/logo.png" width="140" height="70" alt="Логотип сайта">
         </a>
 
         <ul class="navigation-list">
@@ -26,11 +26,13 @@
         <ul class="navigation-user-menu">
           <li class="user-menu-item">
             <a class="user-menu-link" href="#">
+              <img class="icons" src="images/search-icon.svg" width="18" height="18" alt="Поиск">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="user-menu-item">
             <a class="user-menu-link" href="#">
+              <img class="icons" src="images/like-icon.svg" width="18" height="18" alt="Избранное">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
@@ -44,8 +46,7 @@
 
     <main class="main-index">
       <h1 class="visually-hidden">Отдых в городе "Седона"</h1>
-      <!--ВОПРОС: Какой тег использовать? svg или img? Если svg, то как использовать?-->
-      <svg class="main-index-logo" src="#" alt="Добро пожаловать в Седону"></svg>
+      <img class="main-index-logo" src="images/welcome.png" width="458" height="352" alt="Добро пожаловать в Седону">
 
       <section class="main-slogan">
         <h2 class="main-slogan-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -58,9 +59,7 @@
           <li class="main-advantages-item">
             <h3 class="main-advantages-title">Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          </li>
-          <li class="main-advantages-item">
-            <img class="main-advantages-img" src="#" alt="Пейзаж и здания в дикозападном стиле">
+            <img class="main-advantages-img" src="images/photo-town.jpg" width="800" height="385" alt="Пейзаж и здания в дикозападном стиле">
           </li>
           <li class="main-advantages-item">
             <h3 class="main-advantages-title">Небольшая площадь</h3>
@@ -75,11 +74,9 @@
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="main-advantages-item">
-            <img class="main-advantages-img" src="#" alt="Каньоны">
-          </li>
-          <li class="main-advantages-item">
             <h3 class="main-advantages-title">Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <img class="main-advantages-img" src="images/photo-bridge.jpg" width="800" height="385" alt="Каньоны">
           </li>
         </ul>
       </section>
@@ -93,17 +90,17 @@
         <h2 class="visually-hidden">Возможности</h2>
         <ul class="main-features-list">
           <li class="main-features-item">
-            <img class="main-features-icon" src="#" alt="Дом">
+            <img class="main-features-icon" src="images/house-icon.svg" width="75" height="72" alt="Дом">
             <h3 class="main-features-item-text">Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="main-features-item">
-            <img class="main-features-icon" src="#" alt="Гамбургер">
+            <img class="main-features-icon" src="images/humburger-icon.svg" width="74" height="70" alt="Гамбургер">
             <h3 class="main-features-item-text">Еда</h3>
             <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="main-features-item">
-            <img class="main-features-icon" src="#" alt="Подарок">
+            <img class="main-features-icon" src="images/gift-icon.svg" width="64" height="76" alt="Подарок">
             <h3 class="main-features-item-text">Сувениры</h3>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -119,10 +116,9 @@
       <section class="main-subscribe">
         <h2 class="main-subscribe-title">Подпишитесь на рассылку</h2>
         <h3 class="main-subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</h3>
-        <form class="main-subscribe-field" action="https://echo.htmlacademy.ru" method="post">
-          <!--ВОПРОС: Как связать поле для ввода email и кнопку "Подписаться"-->
+        <form class="main-subscribe-field" action="https://echo.htmlacademy.ru" method="get">
           <input class="main-subscribe-email" name="email" type="email" placeholder="Ваш email">
-          <input class="main-subscribe-email-btn" name="email-btn" type="button" value="Подписаться">
+          <input class="main-subscribe-email-btn" name="email-btn" type="submit" value="Подписаться">
         </form>
       </section>
     </main>
@@ -131,17 +127,23 @@
     <footer class="page-footer">
       <ul class="page-footer-social">
         <li class="page-footer-social-item">
-          <img class="page-footer-social-img" src="#" alt="VK">
+          <a href="http://vk.com">
+            <img class="page-footer-social-img" src="images/vk-icon.svg" alt="VK">
+          </a>
         </li>
         <li class="page-footer-social-item">
-          <img class="page-footer-social-img" src="#" alt="Telegram">
+          <a href="https://web.telegram.org/">
+            <img class="page-footer-social-img" src="images/telegram-icon.svg" alt="Telegram">
+          </a>
         </li>
         <li class="page-footer-social-item">
-          <img class="page-footer-social-img" src="#" alt="Youtube">
+          <a href="https://youtube.com">
+            <img class="page-footer-social-img" src="images/youtube-icon.svg" alt="Youtube">
+          </a>
         </li>
       </ul>
       <a class="page-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <img class="page-footer-logo" src="#" alt="Логотип сайта html-academy">
+      <img class="page-footer-logo" src="images/html-academy-logo.png" width="115" height="33" alt="Логотип сайта html-academy">
     </footer>
   </body>
 </html>

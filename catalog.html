@@ -9,7 +9,7 @@
   <header class="page-header">
     <nav class="navigation">
       <a class="logo-link" href="https://htmlacademy.ru/">
-        <img class="page-logo" src="#" alt="Логотип сайта">
+        <img class="page-logo" src="images/logo.png" width="140" height="70" alt="Логотип сайта">
       </a>
 
       <ul class="navigation-list">
@@ -27,11 +27,13 @@
       <ul class="navigation-user-menu">
         <li class="user-menu-item">
           <a class="user-menu-link" href="#">
+            <img class="icons" src="images/search-icon.svg" width="18" height="18" alt="Поиск">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="user-menu-item">
           <a class="user-menu-link" href="#">
+            <img class="icons" src="images/like-icon.svg" width="18" height="18" alt="Избранное">
             <span class="visually-hidden">Избранное</span>
           </a>
         </li>
@@ -48,7 +50,14 @@
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
+            <img class="icons-breadscrumbs" src="images/house-icon-breadscrum.svg" width="12" height="12" alt="Дом">
             <span class="visualy-hidden">Главная</span>
+          </a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">
+            <img class="icons-breadscrumbs" src="images/arrow-breadscrum.svg" width="12" height="12" alt="Стрелочка">
+            <span class="visualy-hidden">Стрелочка</span>
           </a>
         </li>
         <li class="breadcrumbs-item">
@@ -56,7 +65,6 @@
         </li>
       </ul>
 
-      <!--ВОПРОС: Форму ниже надо класть в какую-то обёртку или нет? -->
       <form class="main-inner-filter-included" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="infrastructure">
           <legend class="infrastructure-title">Инфраструктура</legend>
@@ -86,20 +94,19 @@
           <ul class="housing-list">
             <li class="housing-item">
               <label>
-                <input class="control-input" type="radio" name="hotel" checked>
-                <!--ВОПРОС: Класс радио кнопки и чекбокса может совпадать?-->
+                <input class="control-input" type="radio" name="house-type" value="hotel" checked>
                 Гостиница
               </label>
             </li>
             <li class="housing-item">
               <label>
-                <input class="control-input" type="radio" name="motel">
+                <input class="control-input" type="radio" name="house-type" value="motel">
                 Мотель
               </label>
             </li>
             <li class="housing-item">
               <label>
-                <input class="control-input" type="radio" name="apartaments">
+                <input class="control-input" type="radio" name="house-type" value="apartaments">
                 Апартаменты
               </label>
             </li>
@@ -108,21 +115,18 @@
 
         <div class="main-inner-filter-price">
           <span class="filter-price-title">Стоимость, ₽:</span>
-          <!--ВОПРОС: Как добавить "от" и "до" в самом поле справа от цифры?-->
-          <input class="price-input" type="number" min="0" max="9000" value="0">
-          <input class="price-input" type="number" min="0" max="9000" value="0">
+
+          <input class="price-input" name="min-price" type="number" min="0" max="9000" value="0">
+          <input class="price-input" name="max-price" type="number" min="0" max="9000" value="0">
         </div>
 
-        <!--ВОПРОС: Какой тег выбрать под слайдер?-->
         <div class="main-inner-slider"></div>
 
-        <!--ВОПРОС: Для кнопки какие атрибуты надо прописывать?-->
-        <button type="submit">Применить</button>
-        <button type="reset">Сбросить</button>
-      </form>
-      <!--ВОПРОС: Могу ли я вынести кнопки за пределы формы? Если да, то как их связать с формой?-->
 
-      <!--ВОПРОС: Вообще чисто структурно это нормально помещать все дивы, ссылки, спаны в форму? Или же в форме должны находиться чисто "формовские" элементы (типа радио, чекбокс, кнопка и т.д.)-->
+        <button type="submit" name="submit-btn">Применить</button>
+        <button type="reset" name="reset-btn">Сбросить</button>
+      </form>
+
     </section>
 
     <section class="searched-results">
@@ -133,54 +137,76 @@
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <!--ВОПРОС: Почему кнопки для смены вида карточек реализованы ссылками? Нас же не будет перенаправлять на другие страницы-->
+
         <a class="button button-cell" href="#">
           <span class="visually-hidden">Показать список</span>
+          <img src="images/cells-icon.svg" width="16" height="14" alt="Список">
         </a>
         <a class="button button-big" href="#">
-          <span class="visually-hidden">Показать карточки</span>
+          <span class="visually-hidden">Показать крупные значки</span>
+          <img src="images/big-cell-icon.svg" width="16" height="14" alt="Крупные значки">
         </a>
         <a class="button button-list" href="#">
-          <span class="visually-hidden">Показать карточки</span>
+          <span class="visually-hidden">Показать значки</span>
+          <img src="images/list-icon.svg" width="16" height="14" alt="Карточки">
         </a>
       </div>
 
       <div class="searched-results-catalog">
         <div class="searched-results-card">
-          <img class="searched-results-card-img" src="#" alt="Amara Resort and Spa">
+          <a href="#">
+            <img class="searched-results-card-img" src="images/amara-resort.jpg" width="300" height="212" alt="Amara Resort and Spa">
+          </a>
+          <a class="searched-results-card-link" href="#" tabindex="-1">Amara Resort & Spa</a>
           <p>Гостиница</p>
           <p>От 4000р</p>
           <button type="button" class="searched-results-card-details">Подробнее</button>
           <button type="button" class="searched-results-card-favorites">В избранное</button>
-          <!--ВОПРОС: Через какой тег реализуются звёздочки рейтинга в карточке? Это будет просто изображение?-->
-          <img class="card-raiting-img" src="#" alt="Рейтинг гостиницы">
+          <p class="stars four-stars">
+            <span class="visually-hidden">Четыре звезды</span>
+          </p>
           <span class="card-raiting-text">Рейтинг: 8,5</span>
         </div>
         <div class="searched-results-card">
-          <img class="searched-results-card-img" src="#" alt="Villas at Poco Diablo">
+          <a href="#">
+            <img class="searched-results-card-img" src="images/villas-at-poco.jpg" width="300" height="212" alt="Villas at Poco Diablo">
+          </a>
+          <a class="searched-results-card-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
           <p>Гостиница</p>
           <p>От 5000р</p>
           <button type="button" class="searched-results-card-details">Подробнее</button>
           <button type="button" class="searched-results-card-favorites">В избранном</button>
-          <img class="card-raiting-img" src="#" alt="Рейтинг гостиницы">
+          <p class="stars four-stars">
+            <span class="visually-hidden">Четыре звезды</span>
+          </p>
           <span class="card-raiting-text">Рейтинг: 9,2</span>
         </div>
         <div class="searched-results-card">
-          <img class="searched-results-card-img" src="#" alt="Desert Quail Inn">
+          <a href="#">
+            <img class="searched-results-card-img" src="images/desert-quail.jpg" width="300" height="212" alt="Desert Quail Inn">
+          </a>
+          <a class="searched-results-card-link" href="#" tabindex="-1">Desert Quail Inn</a>
           <p>Гостиница</p>
           <p>От 2500р</p>
           <button type="button" class="searched-results-card-details">Подробнее</button>
           <button type="button" class="searched-results-card-favorites">В избранное</button>
-          <img class="card-raiting-img" src="#" alt="Рейтинг гостиницы">
+          <p class="stars three-stars">
+            <span class="visually-hidden">Три звезды</span>
+          </p>
           <span class="card-raiting-text">Рейтинг: 6,9</span>
         </div>
         <div class="searched-results-card">
-          <img class="searched-results-card-img" src="#" alt="GreenTree Inn">
+          <a href="#">
+            <img class="searched-results-card-img" width="300" height="212" src="images/green-tree.jpg" alt="GreenTree Inn">
+          </a>
+          <a class="searched-results-card-link" href="#" tabindex="-1">GreenTree Inn</a>
           <p>Гостиница</p>
           <p>От 1500р</p>
           <button type="button" class="searched-results-card-details">Подробнее</button>
           <button type="button" class="searched-results-card-favorites">В избранное</button>
-          <img class="card-raiting-img" src="#" alt="Рейтинг гостиницы">
+          <p class="stars two-stars">
+            <span class="visually-hidden">Две звезды</span>
+          </p>
           <span class="card-raiting-text">Рейтинг: 5,0</span>
         </div>
       </div>
@@ -220,17 +246,23 @@
   <footer class="page-footer">
     <ul class="page-footer-social">
       <li class="page-footer-social-item">
-        <img class="page-footer-social-img" src="#" alt="VK">
+        <a href="http://vk.com">
+          <img class="page-footer-social-img" src="images/vk-icon.svg" alt="VK">
+        </a>
       </li>
       <li class="page-footer-social-item">
-        <img class="page-footer-social-img" src="#" alt="Telegram">
+        <a href="https://web.telegram.org/">
+          <img class="page-footer-social-img" src="images/telegram-icon.svg" alt="Telegram">
+        </a>
       </li>
       <li class="page-footer-social-item">
-        <img class="page-footer-social-img" src="#" alt="Youtube">
+        <a href="https://youtube.com">
+          <img class="page-footer-social-img" src="images/youtube-icon.svg" alt="Youtube">
+        </a>
       </li>
     </ul>
     <a class="page-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <img class="page-footer-logo" src="#" alt="Логотип сайта html-academy">
+    <img class="page-footer-logo" src="images/html-academy-logo.png" width="115" height="33" alt="Логотип сайта html-academy">
   </footer>
 </body>
 </html>
