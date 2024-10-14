@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a class="logo-link" href="https://htmlacademy.ru/">
+        <a class="logo-link" href="#">
           <img class="page-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта">
         </a>
 
@@ -45,11 +46,15 @@
 
 
     <main class="main-index">
-      <h1 class="visually-hidden">Отдых в городе "Седона"</h1>
-      <img class="main-index-logo" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+      <div class="main-headder">
+        <h1 class="visually-hidden">Отдых в городе "Седона"</h1>
+        <img class="main-index-logo" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+      </div>
+
+      <div class="divider"></div>
 
       <section class="main-slogan">
-        <h2 class="main-slogan-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="main-slogan-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
         <h3 class="main-slogan-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</h3>
       </section>
 
@@ -82,7 +87,7 @@
       </section>
 
       <section class="main-slogan">
-        <h2 class="main-slogan-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <h2 class="main-slogan-title">Приезжайте в Седону отдохнуть<br> в комфорте и уюте!</h2>
         <h3 class="main-slogan-text">Опытный персонал и качественное обслуживание!</h3>
       </section>
 
@@ -91,31 +96,33 @@
         <ul class="main-features-list">
           <li class="main-features-item">
             <img class="main-features-icon" src="images/house-icon.svg" width="75" height="72" alt="Дом">
-            <h3 class="main-features-item-text">Жильё</h3>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <h3 class="main-features-item-title">Жильё</h3>
+            <p>Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
           </li>
           <li class="main-features-item">
             <img class="main-features-icon" src="images/humburger-icon.svg" width="74" height="70" alt="Гамбургер">
-            <h3 class="main-features-item-text">Еда</h3>
-            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <h3 class="main-features-item-title">Еда</h3>
+            <p>Всегда заказывайте<br> топовый фирменный бургер,<br> вы не разочаруетесь!</p>
           </li>
           <li class="main-features-item">
             <img class="main-features-icon" src="images/gift-icon.svg" width="64" height="76" alt="Подарок">
-            <h3 class="main-features-item-text">Сувениры</h3>
-            <p>Не только китайского, но и настоящего местного производства!</p>
+            <h3 class="main-features-item-title">Сувениры</h3>
+            <p>Не только китайского,<br> но и настоящего местного<br> производства!</p>
           </li>
         </ul>
       </section>
 
       <section class="main-search-hotel">
         <h2 class="main-search-hotel-title">Заинтересовались?</h2>
-        <h3 class="main-search-hotel-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</h3>
-        <button class="main-search-hotel-button" type="button">Поиск гостиницы в Седоне</button>
+        <h3 class="main-search-hotel-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</h3>
+        <div>
+          <button class="main-search-hotel-button" type="button">Поиск гостиницы в Седоне</button>
+        </div>
       </section>
 
       <section class="main-subscribe">
         <h2 class="main-subscribe-title">Подпишитесь на рассылку</h2>
-        <h3 class="main-subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</h3>
+        <h3 class="main-subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</h3>
         <form class="main-subscribe-field" action="https://echo.htmlacademy.ru" method="get">
           <input class="main-subscribe-email" name="email" type="email" placeholder="Ваш email">
           <input class="main-subscribe-email-btn" type="submit" value="Подписаться">
