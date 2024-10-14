@@ -404,6 +404,10 @@ body {
   text-decoration: none;
 }
 
+.pagination-current {
+  background-color: #F2F2F2;
+}
+
 .inner-subscribe {
   width: 1200px;
   height: 415px;
