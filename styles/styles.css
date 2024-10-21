@@ -14,16 +14,49 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  background-color: #F2F2F2;
+}
+
+.body-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.navigation {
+  width: 1060px;
+  height: 64px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.logo-link {
+  margin-right: 30px;
+}
+
+.page-header {
   background-color: #ffffff;
+  width: 1200px;
+  height: 64px;
 }
 
 .navigation-list {
+  display: flex;
   list-style-type: none;
+  padding: 0;
+  margin-right: auto;
 }
 
 .navigation-item {
@@ -35,24 +68,40 @@ body {
 }
 
 .navigation-link {
+  padding: 20px 16px;
   color: #000000;
   text-decoration: none;
 }
 
+.navigation-user-menu {
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+
 .user-menu-btn {
-  font-family: PT Sans;
+  width: 160px;
+  height: 36px;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #756157;
+  margin: auto 0;
+}
+
+.user-menu-item {
+  padding: 22px 12px;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .main-index {
-  width: 1200px;
-  position: relative;
+  color: #ffffff;
 }
 
 .main-index-logo {
@@ -61,25 +110,34 @@ body {
   margin-right: auto;
 }
 
-.main-headder {
-  height: 485px;
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
-}
-
-.divider {
-  position: absolute;
+.main-header {
   width: 1200px;
-  height: 57px;
-  background-image: url(../images/divider.png);
-  top: 428px;
+  height: 485px;
+  background-color: #1a5553;
+  background-image: url("../images/divider.png"), url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom, left top;
+  background-size: 100% auto, cover;
 }
 
 .main-slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1200px;
   height: 261px;
   color: #000000;
-  background-color: #fff;
+  background-color: #ffffff;
+}
+
+.main-slogan-container-1 {
+  width: 651px;
+  height: 123px;
+}
+
+.main-slogan-container-2 {
+  width: 505px;
+  height: 118px;
 }
 
 .main-slogan-title {
@@ -88,6 +146,7 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .main-slogan-text {
@@ -95,6 +154,20 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+}
+
+.main-advantages-list {
+  padding: 0;
+}
+
+.main-advantages-item {
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  background-color: #83B3D31F;
 }
 
 .main-advantages-title {
@@ -105,40 +178,29 @@ body {
   text-transform: uppercase;
 }
 
-.main-advantages-item:nth-child(1),
-.main-advantages-item:nth-child(5) {
+.item-with-photo {
   background-color: #82B3D3;
   color: #ffffff;
+  display: flex;
 }
 
-.main-advantages-item p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: center;
-  color: #000000;
+.advantages-item-darker {
+  background-color: #83B3D333;
 }
 
-.main-advantages-item:nth-child(1) p,
-.main-advantages-item:nth-child(5) p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.main-advantages-item:nth-child(2),
-.main-advantages-item:nth-child(4) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.main-advantages-item:nth-child(3) {
-  background: rgba(131, 179, 211, 0.2);
+.main-features-list {
+  padding: 0;
+  display: flex;
 }
 
 .main-features-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 385px;
   background: rgba(131, 179, 211, 0.12);
+  color: #000000;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -146,6 +208,7 @@ body {
 }
 
 .main-features-item-title {
+  font-family: "PT Sans";
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -153,15 +216,28 @@ body {
   text-transform: uppercase;
 }
 
-.main-features-item:nth-child(2) {
+.features-item-lighter {
   background-color: #ffffff;
 }
 
+.features-item-container {
+  width: 230px;
+  height: 223px;
+}
+
 .main-search-hotel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1200px;
   height: 406px;
   background-color: #ffffff;
   color: #000000;
+}
+
+.search-hotel-container {
+  width: 592px;
+  height: 214px;
 }
 
 .main-search-hotel-title {
@@ -182,6 +258,8 @@ body {
 }
 
 .main-search-hotel-button {
+  display: block;
+  margin: 0 auto;
   background: #756157;
   color: #ffffff;
   text-transform: uppercase;
@@ -197,9 +275,18 @@ body {
 }
 
 .main-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1200px;
   height: 415px;
+  background-color: #1a5553;
   background-image: url("../images/subscribe-bg.jpg");
+}
+
+.main-subscribe-container {
+  width: 684px;
+  height: 215px;
 }
 
 .main-subscribe-title {
@@ -233,6 +320,32 @@ body {
   text-align: center;
 }
 
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 120px;
+  background-color: #ffffff;
+}
+
+.page-footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  height: 50px;
+}
+
+.page-footer-social {
+  display: flex;
+  padding: 0;
+}
+
+.page-footer-social-item {
+  width: 47px;
+  height: 40px;
+}
+
 .page-footer-tel {
   color: #000000;
   font-size: 40px;
@@ -242,11 +355,15 @@ body {
   text-decoration: none;
 }
 
+.page-footer-logo {
+  align-self: center;
+}
 
 /*Стили для страницы каталога*/
 .main-inner-filter {
   width: 1200px;
   height: auto;  /*ПОСТАВИТЬ ПОТОМ 412px!!!*/
+  background-color: #000000;
   background-image: url("../images/filter-bg.jpg");
 }
 
@@ -260,7 +377,7 @@ body {
 
 .breadcrumbs-link {
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -270,7 +387,7 @@ body {
 .housing-title,
 .filter-price-title {
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -290,7 +407,7 @@ body {
 .infrastructure-item,
 .housing-item {
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
@@ -319,15 +436,15 @@ body {
 .searched-results-title {
   background-color: #ffffff;
   color: #000000;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-align: left;
 }
 
-.select-control option {
-  font-family: PT Sans;
+.select-control {
+  font-family: "PT Sans", sans-serif;
   background-color: #ffffff;
   color: #000000;
   font-size: 18px;
@@ -339,7 +456,7 @@ body {
 .searched-results-card-link {
   background-color: #ffffff;
   color: #000000;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -354,7 +471,7 @@ body {
 .searched-results-card p {
   background-color: #ffffff;
   color: #000000;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -363,7 +480,7 @@ body {
 .searched-results-card-details {
   background-color: #756157;
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -373,7 +490,7 @@ body {
 .searched-results-card-favorites {
   background-color: #82B3D3;
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -396,7 +513,7 @@ body {
 .pagination-link {
   background-color: #82B3D3;
   color: #ffffff;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
