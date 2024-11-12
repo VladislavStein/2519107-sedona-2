@@ -47,7 +47,6 @@ body {
 
 .navigation {
   width: 1060px;
-  height: 64px;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -60,7 +59,6 @@ body {
 .page-header {
   background-color: #ffffff;
   width: 1200px;
-  height: 64px;
 }
 
 .page-logo {
@@ -84,7 +82,6 @@ body {
   font-weight: 700;
   line-height: 24px;
   text-align: center;
-  min-height: 64px;
 }
 
 .navigation-link {
@@ -95,6 +92,7 @@ body {
 
 .navigation-user-menu {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   align-items: center;
@@ -110,11 +108,26 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #756157;
-  margin: auto 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .user-menu-item {
   padding: 22px 12px;
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 44px;
+  box-sizing: border-box;
+}
+
+.user-menu-item:nth-child(1) {
+  background-image: url("../images/search-icon.svg");
+}
+
+.user-menu-item:nth-child(2) {
+  background-image: url("../images/like-icon.svg");
 }
 
 .main-container {
@@ -125,6 +138,11 @@ body {
   color: #ffffff;
 }
 
+.main-index-logo {
+  display: block;
+  margin: 0 auto;
+}
+
 .main-header {
   width: 1200px;
   height: 485px;
@@ -133,12 +151,7 @@ body {
   background-repeat: no-repeat;
   background-position: left bottom, left top;
   background-size: 100% auto, cover;
-  display: flex;
-  justify-content: center;
-}
-
-.main-index-logo {
-  margin-top: 51px;
+  padding-top: 51px;
 }
 
 .main-slogan {
@@ -190,16 +203,20 @@ body {
   background-color: #83B3D31F;
   width: 400px;
   min-height: 385px;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  box-sizing: border-box;
 }
 
 .main-advantages-title {
   margin: 0;
-  margin-bottom: 30px;
+  padding: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 62px;
 }
 
 .main-advantages-item p {
@@ -211,16 +228,14 @@ body {
   color: #ffffff;
   display: flex;
   width: 1200px;
+  padding: 0;
 }
 
 .item-wrapper {
   width: 400px;
   min-height: 385px;
-}
-
-.dividing-line {
-  display: block;
-  margin-bottom: 30px;
+  padding: 102px 85px;
+  box-sizing: border-box;
 }
 
 .advantages-item-darker {
@@ -229,22 +244,37 @@ body {
 
 .main-features-list {
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 .main-features-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
   width: 400px;
-  height: 385px;
+  min-height: 385px;
   background: rgba(131, 179, 211, 0.12);
   color: #000000;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  padding: 183px 85px 81px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
+}
+
+.main-features-item:nth-child(1) {
+  background-image: url("../images/house-icon.svg");
+}
+
+.main-features-item:nth-child(2) {
+  background-image: url("../images/humburger-icon.svg");
+}
+
+.main-features-item:nth-child(3) {
+  background-image: url("../images/gift-icon.svg");
 }
 
 .main-features-item-title {
@@ -254,15 +284,18 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.main-features-item-text {
+  margin: 0;
+  padding: 0;
 }
 
 .features-item-lighter {
   background-color: #ffffff;
-}
-
-.features-item-container {
-  width: 230px;
-  height: 223px;
 }
 
 .main-search-hotel {
@@ -311,18 +344,14 @@ body {
 }
 
 .main-subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1200px;
-  height: 415px;
   background-color: #1a5553;
   background-image: url("../images/subscribe-bg.jpg");
-}
-
-.main-subscribe-container {
-  width: 684px;
-  height: 215px;
+  padding: 0;
+  margin: 0;
+  padding-top: 96px;
+  padding-bottom: 104px;
+  min-height: 415px;
+  box-sizing: border-box;
 }
 
 .main-subscribe-title {
@@ -332,6 +361,8 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .main-subscribe-text {
@@ -340,6 +371,8 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 .main-subscribe-email-btn {
@@ -377,11 +410,35 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
 }
 
 .page-footer-social-item {
+  min-width: 47px;
+  min-height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-footer-social-item:nth-child(1) {
+  background-size: 24px 14px;
+  background-image: url("../images/vk-icon.svg");
+}
+
+.page-footer-social-item:nth-child(2) {
+  background-size: 18px 15px;
+  background-image: url("../images/telegram-icon.svg");
+}
+
+.page-footer-social-item:nth-child(3) {
+  background-size: 22px 17px;
+  background-image: url("../images/youtube-icon.svg");
+}
+
+.page-footer-social-item a {
+  display: block;
   width: 47px;
-  height: 40px;
+  height: 100%;
 }
 
 .page-footer-tel {
@@ -399,13 +456,13 @@ body {
 
 /*Стили для страницы каталога*/
 .main-inner-filter {
-  width: 1200px;
   min-height: 412px;
-  padding-top: 35px;
-  padding-left: 70px;
-  background-color: #000000;
+  padding: 35px 70px 70px;
+  background-color: #9d4444;
   background-image: url("../images/filter-bg.jpg");
   background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-size: cover;
 }
 
 .main-inner-filter-included {
@@ -447,6 +504,32 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
+  display: block;
+}
+
+.breadcrumbs-item {
+  align-content: center;
+  margin-right: 11px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item:nth-child(1) .breadcrumbs-link {
+  min-width: 12px;
+  min-height: 12px;
+  background-image: url(../images/house-icon-breadscrum.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.breadcrumbs-item:nth-child(2) .breadcrumbs-link {
+  min-width: 6px;
+  min-height: 10px;
+  background-image: url(../images/arrow-breadscrum.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .infrastructure-title,
@@ -557,34 +640,22 @@ body {
   text-transform: uppercase;
 }
 
-.select-control {
-  font-family: "PT Sans", sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: left;
-  width: 292px;
-  margin: 0;
-  margin-right: 70px;
-}
-
 .searched-results-catalog {
   display: flex;
   flex-wrap: wrap;
-  width: 1060px;
   min-height: 896px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  padding: 0 70px;
+  gap: 20px;
 }
 
 .searched-results-card {
-  width: 300px;
+  width: 340px;
   min-height: 438px;
   padding: 20px;
-  border: #000000 1px dotted;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  border: #e6e6e6 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .searched-results-card:nth-last-child(1) {
@@ -600,6 +671,15 @@ body {
   line-height: 28px;
   text-align: left;
   text-decoration: none;
+}
+
+.searched-results-card-link-img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  width: 300px;
+  height: 212px;
 }
 
 .searched-results-card a:first-child {
@@ -635,6 +715,29 @@ body {
   text-align: center;
 }
 
+.searched-results-housing-type {
+  margin: 0;
+  padding: 0;
+}
+
+.searched-results-price {
+  margin: 0;
+  padding: 0;
+}
+
+.select-control {
+  font-family: "PT Sans", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  width: 292px;
+  margin: 0;
+  margin-right: auto;
+}
+
 .card-btn-selected {
   background-color: #7DB54F;
 }
@@ -652,6 +755,7 @@ body {
   margin: 0 70px;
   width: 1060px;
   margin-bottom: 40px;
+  color: #e6e6e6;
 }
 
 .pagination {
@@ -660,7 +764,17 @@ body {
   margin: 0;
   width: 1060px;
   padding-left: 70px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+}
+
+.pagination-item {
+  min-width: 60px;
+  min-height: 60px;
+  margin-right: 8px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-link {
@@ -672,6 +786,9 @@ body {
   line-height: 36px;
   text-align: center;
   text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .pagination-current {
