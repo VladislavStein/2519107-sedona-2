@@ -27,12 +27,12 @@
         </ul>
 
         <ul class="navigation-user-menu">
-          <li class="user-menu-item">
+          <li class="user-menu-item search-icon">
             <a class="user-menu-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="user-menu-item">
+          <li class="user-menu-item favourites-icon">
             <a class="user-menu-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
@@ -112,13 +112,13 @@
           <div class="main-inner-filter-price">
             <span class="filter-price-title">Стоимость, ₽:</span>
 
-            <input class="price-input" name="min-price" type="text" value="0">
-            <input class="price-input" name="max-price" type="text" value="0">
+            <input class="price-input border-radius-left" name="min-price" type="text" value="0">
+            <input class="price-input border-radius-right" name="max-price" type="text" value="0">
 
-            <div class="main-inner-slider"><h2>СЛАЙДЕР</h2></div>
-          </div>
-          <div class="filter-btn-container">
             <button class="filter-submit-btn" type="submit">Применить</button>
+
+            <div class="main-inner-slider"><span>СЛАЙДЕР</span></div>
+
             <button class="filter-reset-btn" type="reset">Сбросить</button>
           </div>
         </form>
@@ -134,18 +134,17 @@
             <option value="popular">Сначала популярные</option>
           </select>
 
-          <a class="button button-cell" href="#">
-            <span class="visually-hidden">Показать список</span>
-            <img src="images/cells-icon.svg" width="16" height="14" alt="Список">
-          </a>
-          <a class="button button-big" href="#">
-            <span class="visually-hidden">Показать крупные значки</span>
-            <img src="images/big-cell-icon.svg" width="16" height="14" alt="Крупные значки">
-          </a>
-          <a class="button button-list" href="#">
-            <span class="visually-hidden">Показать значки</span>
-            <img src="images/list-icon.svg" width="16" height="14" alt="Карточки">
-          </a>
+          <div class="buttons-wrapper">
+            <a class="button button-cell button-selected" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+            <a class="button button-big" href="#">
+              <span class="visually-hidden">Показать крупные значки</span>
+            </a>
+            <a class="button button-list" href="#">
+              <span class="visually-hidden">Показать значки</span>
+            </a>
+          </div>
         </div>
 
         <div class="searched-results-catalog">
@@ -155,7 +154,7 @@
             </a>
             <a class="searched-results-card-link" href="#" tabindex="-1">Amara Resort & Spa</a>
             <p class="searched-results-housing-type">Гостиница</p>
-            <p class="searched-results-price">От 4000р</p>
+            <p class="searched-results-price">От 4000 ₽</p>
             <button type="button" class="searched-results-card-details">Подробнее</button>
             <button type="button" class="searched-results-card-favorites">В избранное</button>
             <p class="stars four-stars">
@@ -169,7 +168,7 @@
             </a>
             <a class="searched-results-card-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
             <p class="searched-results-housing-type">Гостиница</p>
-            <p class="searched-results-price">От 5000р</p>
+            <p class="searched-results-price">От 5000 ₽</p>
             <button type="button" class="searched-results-card-details">Подробнее</button>
             <button type="button" class="searched-results-card-favorites card-btn-selected">В избранном</button>
             <p class="stars four-stars">
@@ -183,7 +182,7 @@
             </a>
             <a class="searched-results-card-link" href="#" tabindex="-1">Desert Quail Inn</a>
             <p class="searched-results-housing-type">Гостиница</p>
-            <p class="searched-results-price">От 2500р</p>
+            <p class="searched-results-price">От 2500 ₽</p>
             <button type="button" class="searched-results-card-details">Подробнее</button>
             <button type="button" class="searched-results-card-favorites">В избранное</button>
             <p class="stars three-stars">
@@ -197,7 +196,7 @@
             </a>
             <a class="searched-results-card-link" href="#" tabindex="-1">GreenTree Inn</a>
             <p class="searched-results-housing-type">Гостиница</p>
-            <p class="searched-results-price">От 1500р</p>
+            <p class="searched-results-price">От 1500 ₽</p>
             <button type="button" class="searched-results-card-details">Подробнее</button>
             <button type="button" class="searched-results-card-favorites">В избранное</button>
             <p class="stars two-stars">
@@ -207,7 +206,7 @@
           </div>
         </div>
 
-        <hr class="catalog-pagination-divider">
+
 
         <ul class="pagination">
           <li class="pagination-item">
@@ -236,7 +235,7 @@
         <h3 class="main-subscribe-text black-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</h3>
         <form class="main-subscribe-field" action="https://echo.htmlacademy.ru" method="get">
           <input class="main-subscribe-email" name="email" type="email" placeholder="Ваш email">
-          <input class="main-subscribe-email-btn" type="submit" value="Подписаться">
+          <button class="main-subscribe-email-btn" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
