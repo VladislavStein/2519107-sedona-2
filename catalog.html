@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Гостиницы Седоны</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.png" sizes="32x32">
 </head>
 <body>
   <div class="body-container">
@@ -35,6 +36,7 @@
           <li class="user-menu-item favourites-icon">
             <a class="user-menu-link" href="#">
               <span class="visually-hidden">Избранное</span>
+              <span class="like-count">12</span>
             </a>
           </li>
         </ul>
@@ -52,7 +54,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
+            <a class="breadcrumbs-link" href="#">
               <span class="visually-hidden">Стрелочка</span>
             </a>
           </li>
@@ -109,16 +111,15 @@
             </ul>
           </fieldset>
 
-          <div class="main-inner-filter-price">
-            <span class="filter-price-title">Стоимость, ₽:</span>
-
-            <input class="price-input border-radius-left" name="min-price" type="text" value="0">
-            <input class="price-input border-radius-right" name="max-price" type="text" value="0">
-
-            <button class="filter-submit-btn" type="submit">Применить</button>
-
+          <fieldset class="main-inner-filter-price">
+            <legend class="filter-price-title">Стоимость, ₽:</legend>
+            <input class="price-input border-radius-left" name="min-price" type="text" value="0 от">
+            <input class="price-input border-radius-right" name="max-price" type="text" value="9000 до">
             <div class="main-inner-slider"><span>СЛАЙДЕР</span></div>
+          </fieldset>
 
+          <div class="main-inner-filter-btn">
+            <button class="filter-submit-btn" type="submit">Применить</button>
             <button class="filter-reset-btn" type="reset">Сбросить</button>
           </div>
         </form>
@@ -243,13 +244,13 @@
     <footer class="page-footer">
       <div class="page-footer-wrapper">
         <ul class="page-footer-social">
-          <li class="page-footer-social-item">
+          <li class="page-footer-social-item vk-icon">
             <a href="http://vk.com"></a>
           </li>
-          <li class="page-footer-social-item">
+          <li class="page-footer-social-item telegram-icon">
             <a href="https://web.telegram.org/"></a>
           </li>
-          <li class="page-footer-social-item">
+          <li class="page-footer-social-item youtube-icon">
             <a href="https://youtube.com"></a>
           </li>
         </ul>
