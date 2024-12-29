@@ -68,21 +68,24 @@
             <legend class="infrastructure-title">Инфраструктура</legend>
             <ul class="infrastructure-list">
               <li class="infrastructure-item">
-                <label>
-                  <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                  Бассейн
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
                 </label>
               </li>
               <li class="infrastructure-item">
-                <label>
-                  <input class="control-input" type="checkbox" name="parking" checked>
-                  Парковка
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
                 </label>
               </li>
               <li class="infrastructure-item">
-                <label>
-                  <input class="control-input" type="checkbox" name="wifi">
-                  Wi-Fi
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-fi</span>
                 </label>
               </li>
             </ul>
@@ -91,21 +94,24 @@
             <legend class="housing-title">Тип Жилья:</legend>
             <ul class="housing-list">
               <li class="housing-item">
-                <label>
-                  <input class="control-input" type="radio" name="house-type" value="hotel" checked>
-                  Гостиница
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="house-type" value="hotel" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="housing-item">
-                <label>
-                  <input class="control-input" type="radio" name="house-type" value="motel">
-                  Мотель
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="house-type" value="motel">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="housing-item">
-                <label>
-                  <input class="control-input" type="radio" name="house-type" value="apartaments">
-                  Апартаменты
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="house-type" value="apartaments">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
@@ -113,9 +119,21 @@
 
           <fieldset class="main-inner-filter-price">
             <legend class="filter-price-title">Стоимость, ₽:</legend>
-            <input class="price-input border-radius-left" name="min-price" type="text" value="0 от">
-            <input class="price-input border-radius-right" name="max-price" type="text" value="9000 до">
-            <div class="main-inner-slider"><span>СЛАЙДЕР</span></div>
+            <label class="filter-price-min" for="price-min">
+              <span class="span-from-to">от</span>
+            </label>
+            <input id="price-min" class="price-input border-radius-left" name="min-price" type="text" value="0">
+            <label class="filter-price-max" for="price-max">
+              <span class="span-from-to">до</span>
+            </label>
+            <input id="price-max" class="price-input border-radius-right" name="max-price" type="text" value="9000">
+
+            <div class="main-inner-slider">
+              <div class="slider-selected" style="left: 0; right: 61px;">
+                <button class="toggle-button toggle-min"></button>
+                <button class="toggle-button toggle-max"></button>
+              </div>
+            </div>
           </fieldset>
 
           <div class="main-inner-filter-btn">
@@ -136,13 +154,13 @@
           </select>
 
           <div class="buttons-wrapper">
-            <a class="button button-cell button-selected" href="#">
+            <a class="button button-cell button-selected" href="catalog.html?view=tile">
               <span class="visually-hidden">Показать список</span>
             </a>
-            <a class="button button-big" href="#">
+            <a class="button button-big" href="catalog.html?view=card">
               <span class="visually-hidden">Показать крупные значки</span>
             </a>
-            <a class="button button-list" href="#">
+            <a class="button button-list" href="catalog.html?view=list">
               <span class="visually-hidden">Показать значки</span>
             </a>
           </div>
@@ -156,7 +174,7 @@
             <a class="searched-results-card-link" href="#" tabindex="-1">Amara Resort & Spa</a>
             <p class="searched-results-housing-type">Гостиница</p>
             <p class="searched-results-price">От 4000 ₽</p>
-            <button type="button" class="searched-results-card-details">Подробнее</button>
+            <a href="#" class="searched-results-card-details">Подробнее</a>
             <button type="button" class="searched-results-card-favorites">В избранное</button>
             <p class="stars four-stars">
               <span class="visually-hidden">Четыре звезды</span>
@@ -170,7 +188,7 @@
             <a class="searched-results-card-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
             <p class="searched-results-housing-type">Гостиница</p>
             <p class="searched-results-price">От 5000 ₽</p>
-            <button type="button" class="searched-results-card-details">Подробнее</button>
+            <a href="#" class="searched-results-card-details">Подробнее</a>
             <button type="button" class="searched-results-card-favorites card-btn-selected">В избранном</button>
             <p class="stars four-stars">
               <span class="visually-hidden">Четыре звезды</span>
@@ -184,7 +202,7 @@
             <a class="searched-results-card-link" href="#" tabindex="-1">Desert Quail Inn</a>
             <p class="searched-results-housing-type">Гостиница</p>
             <p class="searched-results-price">От 2500 ₽</p>
-            <button type="button" class="searched-results-card-details">Подробнее</button>
+            <a href="#" class="searched-results-card-details">Подробнее</a>
             <button type="button" class="searched-results-card-favorites">В избранное</button>
             <p class="stars three-stars">
               <span class="visually-hidden">Три звезды</span>
@@ -198,7 +216,7 @@
             <a class="searched-results-card-link" href="#" tabindex="-1">GreenTree Inn</a>
             <p class="searched-results-housing-type">Гостиница</p>
             <p class="searched-results-price">От 1500 ₽</p>
-            <button type="button" class="searched-results-card-details">Подробнее</button>
+            <a href="#" class="searched-results-card-details">Подробнее</a>
             <button type="button" class="searched-results-card-favorites">В избранное</button>
             <p class="stars two-stars">
               <span class="visually-hidden">Две звезды</span>
@@ -244,20 +262,66 @@
     <footer class="page-footer">
       <div class="page-footer-wrapper">
         <ul class="page-footer-social">
-          <li class="page-footer-social-item vk-icon">
-            <a href="http://vk.com"></a>
+          <li>
+            <a class="page-footer-social-item vk-icon" href="http://vk.com"></a>
           </li>
-          <li class="page-footer-social-item telegram-icon">
-            <a href="https://web.telegram.org/"></a>
+          <li>
+            <a class="page-footer-social-item telegram-icon" href="https://web.telegram.org/"></a>
           </li>
-          <li class="page-footer-social-item youtube-icon">
-            <a href="https://youtube.com"></a>
+          <li>
+            <a class="page-footer-social-item youtube-icon" href="https://youtube.com"></a>
           </li>
         </ul>
         <a class="page-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <img class="page-footer-logo" src="images/logo-html-academy.svg" width="115" height="33" alt="Логотип сайта html-academy">
+        <a class="footer-logo-link" href="#"></a>
       </div>
     </footer>
+  </div>
+
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search">
+      <button class="modal-close-btn">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group">
+            <label for="check-in-date">Дата заезда:</label>
+            <input class="auth-form-date" type="text" id="check-in-date" name="check-in-date" placeholder="27 апреля 2020">
+          </p>
+          <p class="field-group-under-input red">Мы не можем отправить вас в прошлое.</p>
+          <p class="field-group">
+            <label for="check-out-date">Дата выезда:</label>
+            <input class="auth-form-date" type="text" id="check-out-date" name="check-out-date" placeholder="1 сентября 2023">
+          </p>
+          <p class="field-group-under-input black">На эти даты есть свободные номера. Пока есть.</p>
+          <div class="field-group">
+            <div class="field-group-wrapper">
+              <label for="adults-number">Взрослые:</label>
+              <div class="auth-form-count">
+                <button class="btn-counter minus-btn"></button>
+                <input class="auth-form-count-input" type="text" id="adults-number" name="adults-number" placeholder="2">
+                <button class="btn-counter plus-btn"></button>
+              </div>
+            </div>
+            <div class="field-group-wrapper">
+              <label for="children-number">Дети:</label>
+              <button class="modal-info-icon"></button>
+              <div class="modal-info-block">
+                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+              </div>
+              <div class="auth-form-count">
+                <button class="btn-counter minus-btn"></button>
+                <input class="auth-form-count-input" type="text" id="children-number" name="children-number" placeholder="2">
+                <button class="btn-counter plus-btn"></button>
+              </div>
+            </div>
+          </div>
+          <button class="modal-search-btn">Найти</button>
+        </form>
+      </section>
+    </div>
   </div>
 </body>
 </html>
